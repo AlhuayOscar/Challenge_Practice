@@ -44,6 +44,11 @@ function crearClasePersona() {
         return amigo.nombre;
       })
       return nombres
+      /* ###Solucion interesante de un compañero###
+      const transformarObjetoAmigoANombre = ((amigo) => amigo.nombre);
+      const indexed = this.amigos.map(transformarObjetoAmigoANombre);
+      return indexed
+      */
     }
 
     getHobbies() {
@@ -71,7 +76,7 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
-
+      return (this.amigos.map(amigo => amigo.edad).reduce((x, y) => x + y) / this.amigos.length);
     }
   };
 
