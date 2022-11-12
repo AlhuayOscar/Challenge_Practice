@@ -12,6 +12,16 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+
+	// Inicialización de mayor y menor ##Importante no colocar antes del bucle
+	max = strings[strings.length-1];
+	// Colocación del mayor en el ordenamiento
+	for (var i=0; i < strings.length ;i++) {
+		if (strings[i].length > max.length) {
+			max = strings[i];
+		}
+	}
+  return(max);
 }
 
 // No modifiques nada debajo de esta linea //
